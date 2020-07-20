@@ -85,6 +85,13 @@ task web(type: Test) {
     systemProperty 'platform', 'web'
 }
 
+task webshoptest(type: Test) {
+    useJUnitPlatform {
+        includeTags 'webshoptest'
+
+    }
+}
+
 task android(type: Test) {
     useJUnitPlatform {
         includeTags 'android'
